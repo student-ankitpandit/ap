@@ -1,4 +1,6 @@
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import GithubCalendarView from "./components/GithubCalendar";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
           <span className="font-semibold text-sm tracking-tight">ap.</span>
           <div className="flex gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
             <a href="#about" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">About</a>
+            <a href="#experience" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Experience</a>
             <a href="#projects" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Projects</a>
             <a href="#blog" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Blog</a>
             <a href="/resume" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Resume</a>
@@ -21,7 +24,7 @@ export default function Home() {
         <div className="w-full max-w-2xl flex flex-col gap-12">
 
           {/* Hero Section */}
-          <section id="about" className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 ease-out">
+          <ScrollReveal id="about" className="flex flex-col gap-6 ">
             <div className="flex items-center gap-6">
               <img src="/avatar.png" alt="Ankit Pandit" className="w-24 h-24 rounded-full shadow-sm object-cover bg-yellow-400" />
               <div className="flex flex-col">
@@ -42,13 +45,29 @@ export default function Home() {
               <MapPin className="w-4 h-4" />
               <span>New Delhi, India</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 ml-4 animate-pulse"></span>
-              <span className="text-emerald-600 dark:text-emerald-400">Available for work</span>
+              <span className="text-emerald-600 dark:text-emerald-400">Open to work</span>
             </div>
-          </section>
-
+          </ScrollReveal>
+          {/* Experience Section */}
+          <ScrollReveal id="experience" className="flex flex-col gap-4">
+            <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+              Experience
+            </h2>
+            <div className="flex flex-col gap-4">
+              <a href="https://github.com/student-ankitpandit/gemini-cli" target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-2 p-4 -mx-4 rounded-2xl hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-300">
+                <div className="flex items-baseline justify-between w-full">
+                  <h3 className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Open Source Contributor <span className="text-zinc-400 dark:text-zinc-500 font-normal">· gemini-cli</span></h3>
+                  <span className="text-sm text-zinc-500 font-mono shrink-0 ml-4">Feb - Mar 2026</span>
+                </div>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Contributed to the open-source gemini-cli repository, building and fixing features for the command-line interface.
+                </p>
+              </a>
+            </div>
+          </ScrollReveal>
 
           {/* Projects Section */}
-          <section id="projects" className="flex flex-col gap-8">
+          <ScrollReveal id="projects" className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               Projects
             </h2>
@@ -74,10 +93,10 @@ export default function Home() {
                 </p>
               </a>
             </div>
-          </section>
+          </ScrollReveal>
 
           {/* Blog Section */}
-          <section id="blog" className="flex flex-col gap-8">
+          <ScrollReveal id="blog" className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               Blogs
             </h2>
@@ -94,11 +113,11 @@ export default function Home() {
               </a>
 
             </div>
-          </section>
+          </ScrollReveal>
 
 
           {/* Tech Stack Section */}
-          <section id="tech-stack" className="flex flex-col gap-8">
+          <ScrollReveal id="tech-stack" className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               Tech Stack
             </h2>
@@ -134,11 +153,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section>
+          </ScrollReveal>
+
+          <GithubCalendarView />
 
           {/* Workspace & Gears Section */}
           {/* Development Section */}
-          <section id="development" className="flex flex-col gap-8">
+          <ScrollReveal id="development" className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               Development
             </h2>
@@ -152,10 +173,10 @@ export default function Home() {
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">Zsh, Starship, Fastfetch, and shell configuration.</p>
               </a>
             </div>
-          </section>
+          </ScrollReveal>
 
           {/* Personal Section */}
-          <section id="personal" className="flex flex-col gap-8">
+          <ScrollReveal id="personal" className="flex flex-col gap-8">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
               Personal
             </h2>
@@ -165,26 +186,26 @@ export default function Home() {
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">Books that have influenced my thinking and growth.</p>
               </a>
             </div>
-          </section>
+          </ScrollReveal>
           {/* Quote Section */}
-          <section className="w-full">
+          <ScrollReveal className="w-full">
             <div className="relative w-full p-6 sm:p-8 rounded-2xl bg-zinc-50 dark:bg-[#111111] border border-zinc-200 dark:border-zinc-800/50 overflow-hidden">
               <div className="absolute top-0 left-2 text-zinc-200 dark:text-zinc-800/40 font-serif text-[140px] leading-none select-none pointer-events-none font-bold">
                 “
               </div>
               <div className="relative z-10 flex flex-col gap-6 pl-2 sm:pl-8 pt-4">
                 <p className="font-mono italic text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
-                  "Do your duty/work, but do not worry about the results."
+                  "Do your work, don't worry about the results."
                 </p>
                 <div className="text-right text-zinc-500 font-mono text-sm">
                   — Bhagavad Gita
                 </div>
               </div>
             </div>
-          </section>
+          </ScrollReveal>
 
           {/* Footer / Connect */}
-          <section className="flex flex-col gap-6 pt-10 border-t border-zinc-200 dark:border-zinc-800">
+          <ScrollReveal className="flex flex-col gap-6 pt-10 border-t border-zinc-200 dark:border-zinc-800">
             <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Connect</h2>
             <div className="flex items-center gap-4">
               <a href="https://github.com/student-ankitpandit" className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors">
@@ -211,7 +232,7 @@ export default function Home() {
             <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-8">
               © {new Date().getFullYear()} Ankit Pandit. All rights reserved.
             </p>
-          </section>
+          </ScrollReveal>
         </div>
       </main>
     </div>
