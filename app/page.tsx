@@ -57,10 +57,10 @@ export default function Home() {
               <a href="https://github.com/student-ankitpandit/gemini-cli" target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-2 p-4 -mx-4 rounded-2xl hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-300">
                 <div className="flex items-baseline justify-between w-full">
                   <h3 className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Open Source Contributor <span className="text-zinc-400 dark:text-zinc-500 font-normal">· gemini-cli</span></h3>
-                  <span className="text-sm text-zinc-500 font-mono shrink-0 ml-4">Feb - Mar 2026</span>
+                  <span className="text-sm text-zinc-500 font-mono shrink-0 ml-4">Feb 2026 - Mar 2026</span>
                 </div>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Contributed to the open-source gemini-cli repository, building and fixing features for the command-line interface.
+                  Worked mainly on Gemini CLI's terminal UI/UX, focusing on rendering, accessibility, and user experience improvements, while also contributing to backend fixes involving streaming, telemetry, and configuration.
                 </p>
               </a>
             </div>

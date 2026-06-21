@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ankit Pandit - Engineer & Polymath",
-  description: "Personal portfolio of Ankit Pandit. Engineer, Polymath, and Hacker.",
+  description: "Portfolio of Ankit Pandit.",
   icons: {
     icon: "/icon.png",
   },
